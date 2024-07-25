@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import React, { FC } from 'react';
-import FormSearch from '../FormSearch';
+import FormJobSearch from '../FormJobSearch';
 
 interface HeroProps {}
 
@@ -24,7 +24,7 @@ const Hero: FC<HeroProps> = ({}) => {
             Great platform for the job seeker that searching for <br />
             new career heights and passionate about startups.
           </div>
-          <FormSearch />
+          <FormJobSearch />
         </div>
         <div className="block mt-2">
           <Image

@@ -1,7 +1,7 @@
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import Hero from './organism/Hero';
-import FormSearch from './organism/FormSearch/FormSearch';
+import FormJobSearch from './organism/FormJobSearch/FormJobSearch';
 
 import {
   Select,
@@ -14,7 +14,7 @@ import {
 export {
   Button,
   Hero,
-  FormSearch,
+  FormJobSearch,
   Input,
   Select,
   SelectContent,

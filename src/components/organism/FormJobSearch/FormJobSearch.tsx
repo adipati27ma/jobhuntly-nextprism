@@ -12,9 +12,9 @@ import {
   SelectValue,
 } from '@/components';
 
-interface FormSearchProps {}
+interface FormJobSearchProps {}
 
-const FormSearch: FC<FormSearchProps> = ({}) => {
+const FormJobSearch: FC<FormJobSearchProps> = ({}) => {
   return (
     <>
       <div className="mt-6 bg-white p-4 shadow-md inline-flex items-center gap-4 relative w-max">
@@ -50,4 +50,4 @@ const FormSearch: FC<FormSearchProps> = ({}) => {
   );
 };
 
-export default FormSearch;
+export default FormJobSearch;
