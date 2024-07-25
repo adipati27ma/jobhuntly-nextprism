@@ -1,7 +1,8 @@
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import Hero from './organism/Hero';
-import FormJobSearch from './organism/FormJobSearch/FormJobSearch';
+import FormJobSearch from './organism/FormJobSearch';
+import ClientsSection from './organism/ClientsSection';
 
 import {
   Select,
@@ -21,4 +22,5 @@ export {
   SelectItem,
   SelectTrigger,
   SelectValue,
+  ClientsSection,
 };

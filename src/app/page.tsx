@@ -1,10 +1,10 @@
-import { Button, Hero } from '@/components';
-import Image from 'next/image';
+import { ClientsSection, Hero } from '@/components';
 
 export default function Home() {
   return (
     <div className="px-32">
       <Hero />
+      <ClientsSection />
     </div>
   );
 }
