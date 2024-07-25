@@ -13,10 +13,10 @@ const Navbar: FC<NavbarProps> = ({}) => {
           <Image src="/images/logo2.png" alt="logo" width={160} height={36} />
         </div>
         <div>
-          <span className="font-medium text-gray-400 mr-4 cursor-pointer">
+          <span className="font-medium text-gray-400 mr-4 cursor-pointer text-muted-foreground">
             Find Jobs
           </span>
-          <span className="font-medium text-gray-400 cursor-pointer">
+          <span className="font-medium text-gray-400 cursor-pointer text-muted-foreground">
             Browse Companies
           </span>
         </div>
