@@ -5,6 +5,7 @@ import FormJobSearch from './organism/FormJobSearch';
 import ClientsSection from './organism/ClientsSection';
 import Category from './organism/Category';
 import TitleSection from './atom/TitleSection';
+import SignUpBanner from './organism/SignUpBanner/SignUpBanner';
 
 import {
   Select,
@@ -27,4 +28,5 @@ export {
   ClientsSection,
   Category,
   TitleSection,
+  SignUpBanner,
 };
