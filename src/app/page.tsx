@@ -1,4 +1,4 @@
-import { Category, ClientsSection, Hero } from '@/components';
+import { Category, ClientsSection, FeaturedJob, Hero } from '@/components';
 import SignUpBanner from '../components/organism/SignUpBanner/SignUpBanner';
 
 export default function Home() {
@@ -8,6 +8,7 @@ export default function Home() {
       <ClientsSection />
       <Category />
       <SignUpBanner />
+      <FeaturedJob />
     </div>
   );
 }

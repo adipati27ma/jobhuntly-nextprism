@@ -1,11 +1,13 @@
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
+import { Badge } from '@/components/ui/badge';
 import Hero from './organism/Hero';
 import FormJobSearch from './organism/FormJobSearch';
 import ClientsSection from './organism/ClientsSection';
 import Category from './organism/Category';
 import TitleSection from './atom/TitleSection';
 import SignUpBanner from './organism/SignUpBanner/SignUpBanner';
+import FeaturedJob from './organism/FeaturedJob/FeaturedJob';
 
 import {
   Select,
@@ -20,6 +22,7 @@ export {
   Hero,
   FormJobSearch,
   Input,
+  Badge,
   Select,
   SelectContent,
   SelectItem,
@@ -29,4 +32,5 @@ export {
   Category,
   TitleSection,
   SignUpBanner,
+  FeaturedJob,
 };
