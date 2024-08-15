@@ -1,20 +1,13 @@
 import React, { FC } from 'react';
 import Image from 'next/image';
 import { Badge } from '@/components';
+import { JobType } from '@/types';
 
-interface FeaturedJobItemProps {
-  image: string;
-  jobType: string;
-  name: string;
-  type: string;
-  location: string;
-  desc: string;
-  categories: string[];
-}
+interface FeaturedJobItemProps extends JobType {}
 
 const FeaturedJobItem: FC<FeaturedJobItemProps> = ({
   categories,
-  desc,
+  description,
   image,
   jobType,
   location,
@@ -35,7 +28,7 @@ const FeaturedJobItem: FC<FeaturedJobItemProps> = ({
           {type} . {location}
         </div>
         <div className="text-muted-foreground h-12 line-clamp-2 text-ellipsis">
-          {desc}
+          {description}
         </div>
       </div>
       <div className="space-x-2">

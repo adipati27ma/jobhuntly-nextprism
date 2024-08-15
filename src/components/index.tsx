@@ -8,6 +8,7 @@ import Category from './organism/Category';
 import TitleSection from './atom/TitleSection';
 import SignUpBanner from './organism/SignUpBanner/SignUpBanner';
 import FeaturedJob from './organism/FeaturedJob/FeaturedJob';
+import LatestJobs from './organism/LatestJobs/LatestJobs';
 
 import {
   Select,
@@ -33,4 +34,5 @@ export {
   TitleSection,
   SignUpBanner,
   FeaturedJob,
+  LatestJobs,
 };
