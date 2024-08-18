@@ -86,7 +86,7 @@ const Footer: FC<FooterProps> = ({}) => {
       <Separator className="mt-20 mb-11 bg-gray-300" />
       <div className="flex flex-row items-center justify-between">
         <div className="text-slate-600">
-          2021 @ JobHuntly. All rights reserved.
+          2024 @ JobHuntly. All rights reserved.
         </div>
         <div className="space-x-3 flex">
           {socialMediaLinks.map((item: socialMediaLinksType, index: number) => (
