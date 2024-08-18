@@ -1,4 +1,4 @@
-import TitleSection from '@/components/atom/TitleSection';
+import { TitleSection } from '@/components';
 import React, { FC } from 'react';
 import FeaturedJobItem from './FeaturedJobItem';
 
@@ -13,7 +13,7 @@ const FeaturedJob: FC<FeaturedJobProps> = ({}) => {
           <div key={item}>
             <FeaturedJobItem
               categories={['Category 1', 'Category 2']}
-              desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc auctor, justo nec ultricies elementum, justo felis aliquet nunc, vitae vestibulum justo libero id justo."
+              description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc auctor, justo nec ultricies elementum, justo felis aliquet nunc, vitae vestibulum justo libero id justo."
               image="/images/company.png"
               jobType="Full Time"
               location="Jakarta"

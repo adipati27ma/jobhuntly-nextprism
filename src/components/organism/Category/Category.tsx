@@ -1,4 +1,4 @@
-import TitleSection from '@/components/atom/TitleSection';
+import { TitleSection } from '@/components';
 import React, { FC } from 'react';
 import { BiCategory } from 'react-icons/bi';
 import { HiOutlineArrowNarrowRight } from 'react-icons/hi';
