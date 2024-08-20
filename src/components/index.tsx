@@ -10,6 +10,7 @@ import TitleSection from './atom/TitleSection';
 import SignUpBanner from './organism/SignUpBanner/SignUpBanner';
 import FeaturedJob from './organism/FeaturedJob/FeaturedJob';
 import LatestJobs from './organism/LatestJobs/LatestJobs';
+import DynamicFormSearch from './organism/DynamicFormSearch/DynamicFormSearch';
 
 import {
   Select,
@@ -37,4 +38,5 @@ export {
   FeaturedJob,
   LatestJobs,
   Separator,
+  DynamicFormSearch,
 };
