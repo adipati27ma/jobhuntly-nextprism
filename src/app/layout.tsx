@@ -2,7 +2,6 @@ import type { Metadata } from 'next';
 import { Epilogue } from 'next/font/google';
 import './globals.css';
 
-import Image from 'next/image';
 import { Navbar, Footer } from '@/components/layout';
 
 const epilogue = Epilogue({ subsets: ['latin'] });
@@ -22,12 +21,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={epilogue.className}>
         <Navbar />
-        <main>
-          <div className="absolute w-2/3 h-screen top-0 right-0 -z-10 ">
-            <Image src="/images/pattern.png" alt="pattern image" fill />
-          </div>
-          {children}
-        </main>
+        <main>{children}</main>
         <Footer />
       </body>
     </html>
