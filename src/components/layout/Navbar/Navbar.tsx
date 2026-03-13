@@ -2,6 +2,7 @@ import Image from 'next/image';
 import React, { FC } from 'react';
 
 import { Button } from '@/components';
+import Link from 'next/link';
 
 interface NavbarProps {}
 
@@ -10,12 +11,17 @@ const Navbar: FC<NavbarProps> = ({}) => {
     <header className="px-32 py-5 flex flex-row items-start justify-between">
       <div className="inline-flex items-center gap-12">
         <div>
-          <Image src="/images/logo2.png" alt="logo" width={160} height={36} />
+          <Link href="/">
+            <Image src="/images/logo2.png" alt="logo" width={160} height={36} />
+          </Link>
         </div>
         <div>
-          <span className="font-medium text-gray-400 mr-4 cursor-pointer text-muted-foreground">
+          <Link
+            href="/find-jobs"
+            className="font-medium text-gray-400 mr-4 cursor-pointer text-muted-foreground"
+          >
             Find Jobs
-          </span>
+          </Link>
           <span className="font-medium text-gray-400 cursor-pointer text-muted-foreground">
             Browse Companies
           </span>
