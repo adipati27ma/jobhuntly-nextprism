@@ -6,6 +6,13 @@ export type JobType = {
   location: string;
   description: string;
   categories: string[];
+  needs: number;
+  applicants: number;
+};
+
+export type CompanyType = {
+  image: string;
+  name: string;
 };
 
 export type optionType = {

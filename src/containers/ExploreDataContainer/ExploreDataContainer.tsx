@@ -1,6 +1,7 @@
 import { DynamicFormSearch } from '@/components';
 import DynamicFormFilter from '@/components/organism/DynamicFormFilter';
-import { filterGroupType } from '@/types';
+import JobCard from '@/components/organism/JobCard';
+import { CompanyType, filterGroupType, JobType } from '@/types';
 import Image from 'next/image';
 import React, { FC } from 'react';
 
@@ -8,12 +9,22 @@ interface ExploreDataContainerProps {
   RHFormFilter?: any;
   onSubmitFilter: (values: any) => Promise<void>;
   filterGroup: filterGroupType[];
+  loading: boolean;
+  title: string;
+  subtitle: string;
+  data: JobType[] | CompanyType[];
+  pageType: 'job' | 'company';
 }
 
 const ExploreDataContainer: FC<ExploreDataContainerProps> = ({
   RHFormFilter,
   onSubmitFilter,
   filterGroup,
+  loading,
+  title,
+  subtitle,
+  data,
+  pageType,
 }) => {
   return (
     <>
@@ -23,7 +34,7 @@ const ExploreDataContainer: FC<ExploreDataContainerProps> = ({
             <span className="text-5xl font-semibold">Find Your</span>
             <div className="relative">
               <span className="text-5xl font-semibold text-primary">
-                dream job
+                {title}
               </span>
               <div className="absolute top-10 w-[220px] h-10">
                 <Image
@@ -35,9 +46,7 @@ const ExploreDataContainer: FC<ExploreDataContainerProps> = ({
               </div>
             </div>
           </div>
-          <div className="text-center text-gray-500">
-            Find your next career at companies like HubSpot, Nike, and Dropbox
-          </div>
+          <div className="text-center text-gray-500">{subtitle}</div>
         </div>
         <div>
           <DynamicFormSearch />
@@ -56,7 +65,18 @@ const ExploreDataContainer: FC<ExploreDataContainerProps> = ({
             <div className="text-3xl font-semibold">All Jobs</div>
             <div className="text-muted-foreground">Showing 73 Results</div>
 
-            <div>Job Card</div>
+            <div className="mt-5">
+              {loading ? (
+                <div>Loading...</div>
+              ) : (
+                data?.map((item: JobType | CompanyType, i: number) => {
+                  if (pageType === 'job' && 'jobType' in item) {
+                    return <JobCard key={`${i}-${item.name}`} {...item} />;
+                  }
+                  return 'Company Card is under development-';
+                })
+              )}
+            </div>
           </div>
         </div>
       </div>
