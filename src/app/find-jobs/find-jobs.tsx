@@ -14,7 +14,7 @@ interface FindJobsProps {}
 const FILTER_GROUP: filterGroupType[] = [
   {
     name: 'categories',
-    label: 'Categories',
+    label: 'Category',
     items: JOB_CATEGORY_FILTER,
   },
 ];
@@ -23,7 +23,7 @@ const DUMMY_JOB_DATA: JobType[] = [
   {
     name: 'Senior Frontend Developer',
     type: 'Technology',
-    location: 'Remote',
+    location: 'Surabaya, Indonesia',
     jobType: 'Full-time',
     categories: ['Engineering', 'Technology'],
     description:

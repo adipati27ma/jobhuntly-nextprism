@@ -36,10 +36,14 @@ const JobCard: FC<JobCardProps> = ({
             {type} . {location}
           </div>
           <div className="h-5 inline-flex gap-2 items-center">
-            <Badge variant="outline">{jobType}</Badge>
+            <Badge variant="outline" className="rounded">
+              {jobType}
+            </Badge>
             <Separator orientation="vertical" />
             {categories.map((category: string, index: number) => (
-              <Badge key={`${index}-${category}`}>{category}</Badge>
+              <Badge key={`${index}-${category}`} className="rounded">
+                {category}
+              </Badge>
             ))}
           </div>
         </div>

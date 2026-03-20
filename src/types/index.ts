@@ -13,6 +13,9 @@ export type JobType = {
 export type CompanyType = {
   image: string;
   name: string;
+  industry: string;
+  description: string;
+  jobCount: number;
 };
 
 export type optionType = {

@@ -1,6 +1,8 @@
 import { DynamicFormSearch } from '@/components';
+import CompanyCard from '@/components/organism/CompanyCard';
 import DynamicFormFilter from '@/components/organism/DynamicFormFilter';
 import JobCard from '@/components/organism/JobCard';
+import { cn } from '@/lib/utils';
 import { CompanyType, filterGroupType, JobType } from '@/types';
 import Image from 'next/image';
 import React, { FC } from 'react';
@@ -62,10 +64,19 @@ const ExploreDataContainer: FC<ExploreDataContainerProps> = ({
         </div>
         <div className="w-4/5">
           <div className="mb-8">
-            <div className="text-3xl font-semibold">All Jobs</div>
-            <div className="text-muted-foreground">Showing 73 Results</div>
+            <div className="text-3xl font-semibold">
+              All {pageType === 'job' ? 'Jobs' : 'Companies'}
+            </div>
+            <div className="text-muted-foreground">
+              Showing {data.length} Results
+            </div>
 
-            <div className="mt-5">
+            <div
+              className={cn(
+                'mt-5',
+                pageType === 'company' ? 'grid grid-cols-3 gap-5' : '',
+              )}
+            >
               {loading ? (
                 <div>Loading...</div>
               ) : (
@@ -73,7 +84,12 @@ const ExploreDataContainer: FC<ExploreDataContainerProps> = ({
                   if (pageType === 'job' && 'jobType' in item) {
                     return <JobCard key={`${i}-${item.name}`} {...item} />;
                   }
-                  return 'Company Card is under development-';
+                  return (
+                    <CompanyCard
+                      key={`${i}-${item.name}`}
+                      {...(item as CompanyType)}
+                    />
+                  );
                 })
               )}
             </div>
